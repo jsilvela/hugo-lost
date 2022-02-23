@@ -1,7 +1,6 @@
 +++
 date = "now()"
-slug = ""
-tags = ["", ""]
 title = ""
-
+tags = []
+categories = []
 +++

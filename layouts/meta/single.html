@@ -4,12 +4,6 @@
 	
 		<article itemscope itemtype="http://schema.org/BlogPosting">
 			<h1 class="entry-title" itemprop="headline">{{ .Title }}</h1>
-			<span class="entry-meta">
-				<time itemprop="datePublished"
-					datetime="{{ .Date.Format "2006-01-02" }}">
-					{{ .Date.Format "2006, January 02" }}
-				</time>
-			</span>
 
 			<div itemprop="entry-text">
 			
@@ -17,8 +11,6 @@
 			</div>
 		</article>
 	</main>
-
-{{ partial "license.html" . }}
 
 <!-- {{ template "_internal/disqus.html" . }} -->
 {{ partial "footer.html" . }}
