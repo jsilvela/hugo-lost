@@ -8,13 +8,14 @@
 	<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}" />
 {{- end }}
 <link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/extra.css">
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
 <title>
 	{{ $isHomePage := eq .Title .Site.Title }}
 	{{ .Title }}
 	{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}
 </title>
-{{ with Site.Params.goatcounter }}
+{{ with .Site.Params.goatcounter }}
 <script data-goatcounter="{{ . }}"
         async src="//gc.zgo.at/count.js"></script>
 {{ end }}
@@ -65,19 +66,19 @@
 <!--
 		tags
  -->
-		<div class="tags">
 		{{ if .Params.tags }}
+		<div class="tags">
 			<b>Tags:</b>
-		{{ end }}
-		<ul class="tags">
-		{{ range .Params.tags }}
-			<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
-				{{ . }}
-				</a>
-			</li>
-		{{ end }}
-		</ul>
+			<ul class="tags">
+				{{ range .Params.tags }}
+				<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
+					{{ . }}
+					</a>
+				</li>
+				{{ end }}
+			</ul>
 		</div>
+		{{ end }}
 
 	{{end}}
 
