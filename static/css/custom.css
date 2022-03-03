@@ -216,7 +216,6 @@ div.license {
 
 pre, code {
 	font-family: Consolas, Menlo, monospace;
-	font-feature-settings: "ss01";
 	line-height: 1.5;
 	overflow-x: auto;
 }
