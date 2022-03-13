@@ -68,7 +68,7 @@
 }
 
 body {
-	font-family: Georgia, serif;
+	font-family: Charter, Georgia, serif;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 	-moz-osx-font-smoothing: grayscale;
@@ -180,7 +180,9 @@ ul.tags > li {
 	font-size: 1em;
 	color: #AAA;
 	letter-spacing: 0.6px;
+/*
 	font-variant-caps: small-caps;
+ */
 }
 
 footer, section.footnotes {
