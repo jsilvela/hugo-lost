@@ -185,11 +185,11 @@ ul.tags > li {
  */
 }
 
-footer, section.footnotes {
+footer, .footnotes {
 	font-size: 0.8em;
 }
 
-section.footnotes code {
+.footnotes code {
 	font-size: 0.94em; /* (pre font-size / html font-size) */
 }
 
