@@ -68,7 +68,7 @@
 }
 
 body {
-	font-family: Charter, Georgia, serif;
+	font-family: Georgia, serif;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 	-moz-osx-font-smoothing: grayscale;
@@ -146,7 +146,7 @@ ul.tags > li {
 
 .container {
 	width: 85%;
-	max-width: 750px;
+	max-width: 720px;
 	margin: 0 auto;
 }
 
