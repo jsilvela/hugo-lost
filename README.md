@@ -2,6 +2,9 @@
 
 A simple theme for Hugo, based on *Hugo Zen*.
 
+Can do theme switch: dark mode is based on Solarized Dark, Light mode is lifted
+off of the London Review of Books (in 2022)
+
 Hugo Lost is a departure from [Hugo Zen](https://github.com/rakuishi/hugo-zen),
 adding a few bits I needed for my sites
 [Lost Among Notes](https://blog.silvela.org/) and Lost Among Europeans, and simplifying
