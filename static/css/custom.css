@@ -46,20 +46,20 @@
 
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: #002B36;
-		color: #839496;
+		background-color: #0B3742;
+		color: #ABB5B4;
 	}
 
 	pre, code {
-		background:#0A2932;
-		color: #839496;
+		background:#0D3F4C;
+		color: #ABB5B4;
 	}
 
-
-	.chroma { background-color: #0A2932 }
+	.chroma { background-color: #0D3F4C }
+	.chroma .err { background-color: #0D3F4C }
 
 	a {
-		color: #2076C7;
+		color: #5E92E0;
 	}
 }
 
@@ -71,8 +71,6 @@ body {
 	font-family: Georgia, serif;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
 }
 
 strong, b {
@@ -179,10 +177,6 @@ ul.tags > li {
 	font-weight: 700;
 	font-size: 1em;
 	color: #AAA;
-	letter-spacing: 0.6px;
-/*
-	font-variant-caps: small-caps;
- */
 }
 
 footer, .footnotes {
