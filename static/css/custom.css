@@ -46,20 +46,20 @@
 
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: #0B3742;
-		color: #ABB5B4;
+		background-color: #242226;
+		color: #C9C4CF;
 	}
 
 	pre, code {
-		background:#0D3F4C;
-		color: #ABB5B4;
+		background:#2E2834;
+		color: #C9C4CF;
 	}
 
-	.chroma { background-color: #0D3F4C }
-	.chroma .err { background-color: #0D3F4C }
+	.chroma { background-color: #2E2834 }
+	.chroma .err { background-color: #2E2834 }
 
 	a {
-		color: #5E92E0;
+		color: #858EDE;
 	}
 }
 
