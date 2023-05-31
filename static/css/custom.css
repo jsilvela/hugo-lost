@@ -181,6 +181,7 @@ ul.tags > li {
 
 footer, .footnotes {
 	font-size: 0.8em;
+	letter-spacing: 0.02em;
 }
 
 .footnotes code {
