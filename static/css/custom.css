@@ -46,8 +46,16 @@
 
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: #242226;
-		color: #C9C4CF;
+		background-color: #25283B;
+		color: #9AA5CE;
+	}
+
+	a {
+		color: #AB8AE4;
+	}
+
+	.entry-meta {
+		color: #008080bf;
 	}
 
 	pre, code {
@@ -57,10 +65,6 @@
 
 	.chroma { background-color: #2E2834 }
 	.chroma .err { background-color: #2E2834 }
-
-	a {
-		color: #858EDE;
-	}
 }
 
 @page {
