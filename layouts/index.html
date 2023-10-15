@@ -14,7 +14,7 @@
 	{{ end }}
 
 	<div class="tags">
-		<b>Tags</b><br/>
+		<b>Tags</b><br>
 		{{range .Site.Taxonomies.tags -}} 
 			<span class="tag">
 				<a href={{ .Page.RelPermalink }}>
@@ -28,7 +28,7 @@
 	
 	{{ range where .Sections "Section" "=" "post" }}
 	<div class="posts">
-		<b>Posts</b><br/>
+		<b>Posts</b><br>
 		{{ range .Pages }}
 			<article>
 				<h2 class="entry-title">
