@@ -1,4 +1,9 @@
 @media screen {
+	body {
+		/* -moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;	 */
+	}
+
 	html {
 		font-size: 19px;
 	}
@@ -8,21 +13,22 @@
 	}
 
 	body {
-		background-color: #fafaf7;
-		color: #494746;
+		color: black;
+		background-color: #e5e8de;
 	}
 
 	pre, code {
 		background: #ECECEC;
-		color: #494746;
+		color: black;
 	}
 
 	a {
 		color: #0A7CCF;
 	}
 
-
-	.chroma { background-color: #ECECEC }
+	.entry-meta {
+		color: #8F8B8D;
+	}
 }
 
 @media print {
@@ -60,11 +66,8 @@
 
 	pre, code {
 		background:#2E2834;
-		color: #C9C4CF;
+		color: #9AA5CE;
 	}
-
-	.chroma { background-color: #2E2834 }
-	.chroma .err { background-color: #2E2834 }
 }
 
 @page {
