@@ -48,6 +48,10 @@
 	a {
 		color: #0A7CCF;
 	}
+
+	.entry-meta {
+		color: #AAA;
+	}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -192,7 +196,6 @@ ul.tags > li {
 	margin-bottom: 0;
 	font-weight: 700;
 	font-size: 1em;
-	color: #AAA;
 }
 
 footer, .footnotes {
