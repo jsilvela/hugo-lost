@@ -1,9 +1,4 @@
 @media screen {
-	body {
-		/* -moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;	 */
-	}
-
 	html {
 		font-size: 19px;
 	}
@@ -15,6 +10,8 @@
 	body {
 		color: black;
 		background-color: #e5e8de;
+		/* -moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;	 */
 	}
 
 	pre, code {
@@ -24,10 +21,6 @@
 
 	a {
 		color: #0A7CCF;
-	}
-
-	.entry-meta {
-		color: #8F8B8D;
 	}
 }
 
@@ -48,10 +41,6 @@
 	a {
 		color: #0A7CCF;
 	}
-
-	.entry-meta {
-		color: #AAA;
-	}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -62,10 +51,6 @@
 
 	a {
 		color: #AB8AE4;
-	}
-
-	.entry-meta {
-		color: #008080bf;
 	}
 
 	pre, code {
@@ -196,6 +181,7 @@ ul.tags > li {
 	margin-bottom: 0;
 	font-weight: 700;
 	font-size: 1em;
+	color: #8F8B8D;
 }
 
 footer, .footnotes {
