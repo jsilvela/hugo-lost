@@ -184,18 +184,21 @@ ul.tags > li {
 	color: #8F8B8D;
 }
 
-footer, .footnotes {
+footer, .footnotes, span.caption, figcaption {
 	font-size: 0.8em;
-	letter-spacing: 0.02em;
-}
-
-.footnotes code {
-	font-size: 0.94em; /* (pre font-size / html font-size) */
+	letter-spacing: 0.015em;
 }
 
 span.caption {
 	display: block;
-	font-size: 0.8em;
+}
+
+figcaption {
+	line-height: 1.4;
+}
+
+.footnotes code {
+	font-size: 0.94em; /* (pre font-size / html font-size) */
 }
 
 .footer-link {
@@ -208,6 +211,7 @@ div.posts, div.tags {
 
 div.license {
 	font-size: 0.7em;
+	letter-spacing: 0.02em;
 }
 
 .hr {
