@@ -3,7 +3,7 @@
 A simple theme for Hugo, based on *Hugo Zen*.
 
 Can do theme switch: dark mode is based the Tokyo Night theme offered
-with Bear app. Light mode is lifted off of www.phenomenalworld.org (in 2023)
+with Bear app, light mode from Rose Pine Dawn.
 
 Hugo Lost is a departure from [Hugo Zen](https://github.com/rakuishi/hugo-zen),
 adding a few bits I needed for my sites
