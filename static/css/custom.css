@@ -9,11 +9,15 @@
 
 	body {
 		color: black;
+		background-color: #ece4dd;
+	}
+
+	div.page-area {
 		background-color: #faf4ed;
 	}
 
 	pre, code {
-		background: #ECECEC;
+		background-color: #ECECEC;
 		color: black;
 	}
 
@@ -43,8 +47,12 @@
 
 @media screen and (prefers-color-scheme: dark) {
 	body {
-		background-color: #25283B;
+		background-color: #15182B;
 		color: #9AA5CE;
+	}
+
+	div.page-area {
+		background-color: #25283B;
 	}
 
 	a {
@@ -52,7 +60,7 @@
 	}
 
 	pre, code {
-		background:#2E2834;
+		background-color:#2E2834;
 		color: #9AA5CE;
 	}
 }
