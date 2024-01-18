@@ -9,9 +9,7 @@
 
 	body {
 		color: black;
-		background-color: #faf4ed; /* #e5e8de; */
-		/* -moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;	 */
+		background-color: #faf4ed;
 	}
 
 	pre, code {
@@ -43,7 +41,7 @@
 	}
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
 	body {
 		background-color: #25283B;
 		color: #9AA5CE;
@@ -102,8 +100,20 @@ img {
 
 header,
 footer {
-	margin: 2rem 0;
+	margin: 1rem 0;
 	text-align: center;
+}
+
+div.page-area {
+	max-width: 990px;
+	margin: 0 auto;
+}
+
+div.container {
+	width: 85%;
+	max-width: 690px;
+	margin: 0 auto;
+	padding: 10px 0;
 }
 
 header table {
@@ -145,12 +155,6 @@ ul.tags {
 ul.tags > li {
     display: inline-block;
     margin-right: 0.4em;
-}
-
-.container {
-	width: 85%;
-	max-width: 720px;
-	margin: 0 auto;
 }
 
 .header-logo img {
