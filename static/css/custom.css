@@ -1,24 +1,42 @@
+html {
+	--text-font-size: 18px;
+	--code-font-size: 16px;
+	--text-font-size-print: 11pt;
+	--code-font-size-print: 10pt;
+
+	--light-mode-color: #222;
+	--light-mode-code-color: #000;
+	--light-mode-page-background: #fafaf7;;
+	--light-mode-overall-background: #eaeae7;
+
+	--dark-mode-color: #95A0C9;
+	--dark-mode-code-color: #b0c5ef;
+	--dark-mode-page-background: #25283B;
+	--dark-mode-code-background: #35384B;
+	--dark-mode-overall-background: #15182B;
+}
+
 @media screen {
 	html {
-		font-size: 19px;
+		font-size: var(--text-font-size);
 	}
 
 	pre, code {
-		font-size: 17px;
+		font-size: var(--code-font-size);
 	}
 
 	body {
-		color: black;
-		background-color: #ece4dd;
+		color: var(--light-mode-color);
+		background-color: var(--light-mode-overall-background);
 	}
 
 	div.page-area {
-		background-color: #faf4ed;
+		background-color: var(--light-mode-page-background);
 	}
 
 	pre, code {
-		background-color: #ECECEC;
-		color: black;
+		background-color: var(--light-mode-overall-background);
+		color: var(--light-mode-code-color);
 	}
 
 	a {
@@ -28,11 +46,11 @@
 
 @media print {
 	html {
-		font-size: 11pt;
+		font-size: var(--text-font-size-print);
 	}
 
 	pre, code {
-		font-size: 9pt;
+		font-size: var(--code-font-size-print);
 	}
 
 	body {
@@ -47,12 +65,12 @@
 
 @media screen and (prefers-color-scheme: dark) {
 	body {
-		background-color: #15182B;
-		color: #9AA5CE;
+		background-color: var(--dark-mode-overall-background);
+		color: var(--dark-mode-color);
 	}
 
 	div.page-area {
-		background-color: #25283B;
+		background-color: var(--dark-mode-page-background);
 	}
 
 	a {
@@ -60,8 +78,8 @@
 	}
 
 	pre, code {
-		background-color:#2E2834;
-		color: #9AA5CE;
+		background-color: var(--dark-mode-code-background);
+		color: var(--dark-mode-code-color);
 	}
 }
 
@@ -210,7 +228,7 @@ figcaption {
 }
 
 .footnotes code {
-	font-size: 0.94em; /* (pre font-size / html font-size) */
+	font-size: calc(var(--code-font-size) / var(--text-font-size));
 }
 
 .footer-link {
