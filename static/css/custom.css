@@ -26,6 +26,7 @@ html {
 	}
 
 	body {
+		-webkit-text-size-adjust: 100%;
 		color: var(--light-mode-color);
 		background-color: var(--light-mode-overall-background);
 	}
