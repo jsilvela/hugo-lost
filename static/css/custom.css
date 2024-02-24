@@ -6,7 +6,7 @@ html {
 
 	--light-mode-color: #222;
 	--light-mode-code-color: #000;
-	--light-mode-page-background: #fafaf7;;
+	--light-mode-page-background: #fafaf7;
 	--light-mode-overall-background: #eaeae7;
 
 	--dark-mode-color: #95A0C9;
@@ -89,7 +89,7 @@ html {
 }
 
 body {
-	font-family: Georgia, serif;
+	font-family: charter, bitstream charter, sitka, Georgia, serif;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 }
