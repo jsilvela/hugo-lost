@@ -7,6 +7,9 @@
 {{ if .Params.tags -}}
 	<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}">
 {{- end }}
+{{ with .Site.Author -}}
+	<meta name="author" content="{{ .name }}">
+{{- end }}
 <link rel="stylesheet" href="/css/custom.css">
 <link rel="stylesheet" href="/css/extra.css">
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
