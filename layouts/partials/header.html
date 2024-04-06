@@ -7,11 +7,15 @@
 {{ if .Params.tags -}}
 	<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}">
 {{- end }}
-{{ with .Site.Author -}}
+{{ with .Site.Params.author -}}
 	<meta name="author" content="{{ .name }}">
 {{- end }}
-<link rel="stylesheet" href="/css/custom.css">
-<link rel="stylesheet" href="/css/extra.css">
+
+{{ $theme := resources.Get "css/custom.css" }}
+{{ $extra := resources.Get "css/extra.css" }}
+{{ $CSS := slice $theme $extra | resources.Concat "main.css" }}
+<!-- {{ $CSS := resources.Match "css/**.css" | resources.Concat "main.css" }} -->
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media="all">
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
 <title>
 	{{ $isHomePage := eq .Title .Site.Title }}
