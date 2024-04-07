@@ -7,6 +7,9 @@
 {{ if .Params.tags -}}
 	<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}">
 {{- end }}
+{{ if .Params.description -}}
+	<meta name="description" content="{{ .Params.description }}">
+{{- end }}
 {{ with .Site.Params.author -}}
 	<meta name="author" content="{{ .name }}">
 {{- end }}
