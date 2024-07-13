@@ -110,7 +110,7 @@ h3, h4, h5,
 h6 { font-size: 1em; }
 
 h1, h2, h3, h4, h5, h6 {
-	margin-top: 1rem;
+	margin-top: 18px;
 	margin-bottom: 0;
 }
 
@@ -127,7 +127,7 @@ img {
 
 header,
 footer {
-	margin: 1rem 0;
+	margin: 18px 0;
 	text-align: center;
 }
 
@@ -154,7 +154,7 @@ blockquote {
 }
 
 main {
-	margin: 1.5rem 0;
+	margin: 24px 0;
 }
 
 .tags, .meta, .posts b, .pages {
@@ -168,7 +168,7 @@ div.tags {
 
 span.tag {
 	display: inline-block;
-	margin-right: 0.5em;
+	margin-right: 9px;
 }
 
 ul.tags {
@@ -181,7 +181,7 @@ ul.tags {
 
 ul.tags > li {
     display: inline-block;
-    margin-right: 0.4em;
+    margin-right: 7px;
 }
 
 .header-logo img {
@@ -196,7 +196,7 @@ ul.tags > li {
 }
 
 .site-title {
-	margin-top: 2rem;
+	margin-top: 36px;
 }
 
 .entry-title {
