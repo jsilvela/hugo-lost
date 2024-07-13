@@ -220,6 +220,10 @@ footer, .footnotes, span.caption, figcaption {
 	letter-spacing: 0.015em;
 }
 
+.footnotes > ol p {
+	margin: 10px 0;
+}
+
 span.caption {
 	display: block;
 }
