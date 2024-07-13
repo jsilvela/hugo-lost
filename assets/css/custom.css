@@ -110,7 +110,7 @@ h3, h4, h5,
 h6 { font-size: 1em; }
 
 h1, h2, h3, h4, h5, h6 {
-	margin-top: 1.5rem;
+	margin-top: 1rem;
 	margin-bottom: 0;
 }
 
@@ -144,7 +144,7 @@ div.container {
 }
 
 header table {
-	margin: 2rem 0 0.5rem 0;
+	margin: 36px 0 9px 0;
 	text-align: left;
 	font-size: 0.9rem;
 }
@@ -157,7 +157,7 @@ main {
 	margin: 1.5rem 0;
 }
 
-.tags, .meta, .posts b {
+.tags, .meta, .posts b, .pages {
 	font-size: 0.9rem;
 }
 
@@ -224,7 +224,7 @@ span.caption {
 	display: block;
 }
 
-figcaption {
+header table, .footnotes, figcaption {
 	line-height: 1.4;
 }
 
@@ -233,11 +233,11 @@ figcaption {
 }
 
 .footer-link {
-	margin: 2rem 0;
+	margin: 5px 0;
 }
 
-div.posts, div.tags {
-	margin-top: 1.5em;
+div.posts, div.tags, div.pages {
+	margin-top: 10px;
 }
 
 div.license {
@@ -247,7 +247,7 @@ div.license {
 
 .hr {
 	height: 1px;
-	margin: 2rem 0;
+	margin: 20px 0;
 	background: #E1E1E1;
 }
 
