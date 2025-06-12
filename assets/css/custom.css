@@ -118,6 +118,18 @@ h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+	h2, h3, h4, h5, h6 {
+		color: #5585c4;
+	}
+}
+
+@media screen and (prefers-color-scheme: light) {
+	h2, h3, h4, h5, h6 {
+		color: #d73027;
+	}
+}
+
 img {
 	max-width: 100%;
 	height: auto;
