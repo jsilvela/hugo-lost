@@ -156,7 +156,7 @@ div.container {
 }
 
 header table {
-	margin: 36px 0 9px 0;
+	margin: 16px 0 9px 0;
 	text-align: left;
 	font-size: 0.9rem;
 }
@@ -252,13 +252,17 @@ header table, .footnotes, figcaption {
 	margin: 5px 0;
 }
 
+.footer-link a {
+	margin: 0px 2px;
+}
+
 div.posts, div.tags, div.pages {
 	margin-top: 10px;
 }
 
 div.license {
-	font-size: 0.7em;
-	letter-spacing: 0.02em;
+	font-size: 0.8em;
+	letter-spacing: 0.015em;
 }
 
 .hr {
