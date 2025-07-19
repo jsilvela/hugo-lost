@@ -8,12 +8,16 @@ html {
 	--light-mode-code-color: #000;
 	--light-mode-page-background: #fafaf7;
 	--light-mode-overall-background: #eaeae7;
+	--light-mode-link-color: #006CBF;
+	--light-mode-text-accents: #d73027;
 
 	--dark-mode-color: #95A0C9;
 	--dark-mode-code-color: #b0c5ef;
 	--dark-mode-page-background: #25283B;
 	--dark-mode-code-background: #35384B;
 	--dark-mode-overall-background: #15182B;
+	--dark-mode-link-color: #7fbbb3;
+	--dark-mode-text-accents:#E67e80;
 }
 
 @media screen {
@@ -41,7 +45,7 @@ html {
 	}
 
 	a {
-		color: #006CBF;
+		color: var(--light-mode-link-color);
 	}
 }
 
@@ -75,7 +79,7 @@ html {
 	}
 
 	a {
-		color: #AB8AE4;
+		color: var(--dark-mode-link-color);
 	}
 
 	pre, code {
@@ -120,13 +124,19 @@ h2, h3, h4, h5, h6 {
 
 @media screen and (prefers-color-scheme: dark) {
 	h2, h3, h4, h5, h6 {
-		color: #5585c4;
+		color: var(--dark-mode-text-accents);
+	}
+	blockquote {
+		border-color: var(--dark-mode-text-accents);
 	}
 }
 
 @media screen and (prefers-color-scheme: light) {
 	h2, h3, h4, h5, h6 {
-		color: #d73027;
+		color: var(--light-mode-text-accents);
+	}
+	blockquote {
+		border-color: var(--light-mode-text-accents);
 	}
 }
 
