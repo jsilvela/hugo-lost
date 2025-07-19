@@ -11,11 +11,11 @@ html {
 	--light-mode-link-color: #006CBF;
 	--light-mode-text-accents: #d73027;
 
-	--dark-mode-color: #95A0C9;
-	--dark-mode-code-color: #b0c5ef;
-	--dark-mode-page-background: #25283B;
+	--dark-mode-color: #d3c6aa;
+	--dark-mode-code-color: #d3c6aa;
+	--dark-mode-overall-background: #1e2326;
 	--dark-mode-code-background: #35384B;
-	--dark-mode-overall-background: #15182B;
+	--dark-mode-page-background: #1e2326;
 	--dark-mode-link-color: #7fbbb3;
 	--dark-mode-text-accents:#E67e80;
 }
