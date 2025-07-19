@@ -173,6 +173,8 @@ header table {
 
 blockquote {
 	font-style: italic;
+	border-left-width: 5px;
+	border-left-style: solid;
 }
 
 main {
