@@ -55,7 +55,7 @@
 						</a>
 					</td>
 					<td>
-						<em>{{.NextInSection.Title}}</em>
+						{{.NextInSection.Title | markdownify}}
 					</td>
 				</tr>
 			{{end}}
@@ -67,7 +67,7 @@
 						</a>
 					</td>
 					<td>
-						<em>{{.PrevInSection.Title}}</em>
+						{{.PrevInSection.Title | markdownify}}
 					</td>
 				</tr>
 			{{end}}
