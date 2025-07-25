@@ -4,11 +4,18 @@
 <meta charset="utf-8">
 {{ hugo.Generator }}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{{ $keywords := slice }}
 {{ if .Params.tags -}}
-	<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}">
+    {{ $keywords = $keywords | append .Params.tags }}
 {{- end }}
-{{ if .Params.description -}}
-	<meta name="description" content="{{ .Params.description }}">
+{{ if .Keywords -}}
+    {{ $keywords = $keywords | append .Keywords }}
+{{- end }}
+<meta name="keywords" content="{{ with $keywords }}{{ delimit . ", "}}{{ end }}">
+
+{{ if .Description -}}
+	<meta name="description" content="{{ .Description }}">
 {{- end }}
 {{ with .Site.Params.author -}}
 	<meta name="author" content="{{ .name }}">
