@@ -36,6 +36,14 @@
 <script data-goatcounter="{{ . }}"
         async src="//gc.zgo.at/count.js"></script>
 {{ end }}
+
+<!--
+		Maybe math?
+ -->
+{{ if .Param "math" }}
+{{ partialCached "math.html" . }}
+{{ end }}
+
 </head>
 <body>
 
