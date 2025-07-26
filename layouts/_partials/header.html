@@ -61,51 +61,8 @@
 		Navigation
  -->
 	{{if eq "post" .Section}}
-		{{if or .PrevInSection .NextInSection}}
-		<table>
-			{{if .NextInSection}}
-				<tr>
-					<td><a href="{{.NextInSection.Permalink}}">
-						&lt;&lt; Newer
-						</a>
-					</td>
-					<td>
-						{{.NextInSection.Title | markdownify}}
-					</td>
-				</tr>
-			{{end}}
-			{{if .PrevInSection}}
-				<tr>
-					<td>
-						<a href="{{.PrevInSection.Permalink}}">
-							Older &gt;&gt;
-						</a>
-					</td>
-					<td>
-						{{.PrevInSection.Title | markdownify}}
-					</td>
-				</tr>
-			{{end}}
-		</table>
-		{{end}}
-
-<!--
-		tags
- -->
-		{{ if .Params.tags }}
-		<div class="tags">
-			<b>Tags:</b>
-			<ul class="tags">
-				{{ range .Params.tags }}
-				<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
-					{{ . }}
-					</a>
-				</li>
-				{{ end }}
-			</ul>
-		</div>
-		{{ end }}
-
+		{{ partial "nav.html" . }}
+		{{ partial "tags.html" . }}
 	{{end}}
 
 	</header>

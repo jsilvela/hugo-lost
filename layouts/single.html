@@ -1,22 +1,31 @@
-{{ partial "header.html" . }}
+{{ define "header" }}
+	{{ if eq $isHomePage true }}
+		<h1 class="site-title">{{ .Site.Title }}</h1>
+	{{ else }}
+		<h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
+	{{ end }}
 
-	<main>
+	{{if eq "post" .Section}}
+		{{ partial "nav.html" . }}
+		{{ partial "tags.html" . }}
+	{{end}}
+{{ end }}
+
+{{ define "main" }}
 	
-		<article itemscope itemtype="http://schema.org/BlogPosting">
-			<h1 class="entry-title" itemprop="headline">{{ .Title | markdownify }}</h1>
-			<span class="entry-meta">
-				<time itemprop="datePublished"
-					datetime="{{ .Date.Format "2006-01-02" }}">
-					{{ .Date.Format "2006, January 02" }}
-				</time>
-			</span>
+	<article itemscope itemtype="http://schema.org/BlogPosting">
+		<h1 class="entry-title" itemprop="headline">{{ .Title | markdownify }}</h1>
+		<span class="entry-meta">
+			<time itemprop="datePublished"
+				datetime="{{ .Date.Format "2006-01-02" }}">
+				{{ .Date.Format "2006, January 02" }}
+			</time>
+		</span>
 
-			<div itemprop="entry-text">
-			
-				{{ .Content }}
-			</div>
-		</article>
-	</main>
+		<div itemprop="entry-text">
+		
+			{{ .Content }}
+		</div>
+	</article>
 
-<!-- {{ template "_internal/disqus.html" . }} -->
-{{ partial "footer.html" . }}
+{{ end }}

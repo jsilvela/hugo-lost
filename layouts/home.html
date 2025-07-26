@@ -1,6 +1,4 @@
-{{ partial "header.html" . }}
-
-	<main role="main">
+{{ define "main" }}
 
 	{{ range where .Sections "Section" "=" "top" }}
 	<div class="meta">
@@ -44,6 +42,4 @@
 	</div>
 	{{ end }}
 	
-	</main>
-
-{{ partial "footer.html" . }}
+{{ end }}
