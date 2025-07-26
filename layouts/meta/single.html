@@ -1,16 +1,20 @@
-{{ partial "header.html" . }}
+{{ define "header" }}
+	{{ if .IsHome }}
+		<h1 class="site-title">{{ .Site.Title }}</h1>
+	{{ else }}
+		<h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
+	{{ end }}
 
-	<main>
+{{ end }}
+
+{{ define "main" }}
 	
-		<article itemscope itemtype="http://schema.org/BlogPosting">
-			<h1 class="entry-title" itemprop="headline">{{ .Title | markdownify }}</h1>
+	<article itemscope itemtype="http://schema.org/BlogPosting">
+		<h1 class="entry-title" itemprop="headline">{{ .Title | markdownify }}</h1>
 
-			<div itemprop="entry-text">
-			
-				{{ .Content }}
-			</div>
-		</article>
-	</main>
+		<div itemprop="entry-text">
+			{{ .Content }}
+		</div>
+	</article>
 
-<!-- {{ template "_internal/disqus.html" . }} -->
-{{ partial "footer.html" . }}
+{{ end }}
