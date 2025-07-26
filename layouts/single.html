@@ -1,5 +1,5 @@
 {{ define "header" }}
-	{{ if eq $isHomePage true }}
+	{{ if .IsHome }}
 		<h1 class="site-title">{{ .Site.Title }}</h1>
 	{{ else }}
 		<h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
