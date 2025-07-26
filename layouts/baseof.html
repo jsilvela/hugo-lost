@@ -2,6 +2,9 @@
 <html lang="{{ with .Language.LanguageCode }} {{- . -}} {{ else }} {{ with site.Language.LanguageCode }} {{- . -}} {{ else }} en-US {{ end }} {{ end }}">
 <head>
     {{ partial "head.html" }}
+    {{ if .Param "math" }}
+        {{ partialCached "math.html" . }}
+    {{ end }}
 </head>
 <body>
 
