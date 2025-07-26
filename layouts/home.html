@@ -1,18 +1,32 @@
+{{ define "header" }}
+	<h1 class="site-title">{{ .Site.Title }}</h1>
+{{ end }}
+
 {{ define "main" }}
 
-	{{ range where .Sections "Section" "=" "top" }}
+	{{ range where .Sections "Section" "=" "meta" }}
 	<div class="meta">
-		<b>Meta</b>
+		<b>Meta&nbsp;</b>
 			{{ range .Pages }}
-			<a href={{ .Page.RelPermalink }}>
-				{{.Page.Title}}
-			</a>
+			<a href="{{ .Page.RelPermalink }}">{{.Page.Title | markdownify }}</a>&nbsp;
 		{{ end }}
 	</div>
 	{{ end }}
 
+	<!-- Fixed entries -->
+	{{ range where .Sections "Section" "=" "top" }}
+		<div class="pages">
+			<b>Pages&nbsp;</b>
+			{{ range .Pages }}
+				<span class="entry-title">
+					<a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+				</span>
+			{{ end }}
+		</div>
+	{{ end }}
+				
 	<div class="tags">
-		<b>Tags</b><br>
+		<b>Tags&nbsp;</b>
 		{{range .Site.Taxonomies.tags -}} 
 			<span class="tag">
 				<a href={{ .Page.RelPermalink }}>
@@ -20,17 +34,15 @@
 				</a><sup class="b">{{.Count}}</sup>
 			</span>
 		{{- end}}
-	</div>	
+	</div>
 
 	<!-- Posts -->
-	
 	{{ range where .Sections "Section" "=" "post" }}
-	<div class="posts">
-		<b>Posts</b><br>
+		<h2>Posts</h2>
 		{{ range .Pages }}
 			<article>
 				<h2 class="entry-title">
-					<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+					<a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
 				</h2>
 				<span class="entry-meta">
 					<time datetime="{{ .Date.Format "2006-01-02" }}">
@@ -39,7 +51,6 @@
 				</span>
 			</article>
 		{{ end }}
-	</div>
 	{{ end }}
-	
+
 {{ end }}
