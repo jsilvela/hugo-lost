@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+{{ hugo.Generator }}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{{ $keywords := slice }}
+{{ if .Params.tags -}}
+    {{ $keywords = $keywords | append .Params.tags }}
+{{- end }}
+{{ if .Keywords -}}
+    {{ $keywords = $keywords | append .Keywords }}
+{{- end }}
+<meta name="keywords" content="{{ with $keywords }}{{ delimit . ", "}}{{ end }}">
+
+{{ if .Description -}}
+	<meta name="description" content="{{ .Description }}">
+{{- end }}
+{{ with .Site.Params.author -}}
+	<meta name="author" content="{{ .name }}">
+{{- end }}
+
+{{ $theme := resources.Get "css/custom.css" }}
+{{ $extra := resources.Get "css/extra.css" }}
+{{ $CSS := slice $theme $extra | resources.Concat "main.css" }}
+<!-- {{ $CSS := resources.Match "css/**.css" | resources.Concat "main.css" }} -->
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media="all">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
+<title>
+	{{ $isHomePage := eq .Title .Site.Title }}
+	{{ .Title }}
+	{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}
+</title>
+{{ with .Site.Params.goatcounter }}
+<script data-goatcounter="{{ . }}"
+        async src="//gc.zgo.at/count.js"></script>
+{{ end }}
+
+<!--
+		Maybe math?
+ -->
+{{ if .Param "math" }}
+{{ partialCached "math.html" . }}
+{{ end }}

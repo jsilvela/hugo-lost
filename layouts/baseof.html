@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ with .Language.LanguageCode }} {{- . -}} {{ else }} {{ with site.Language.LanguageCode }} {{- . -}} {{ else }} en-US {{ end }} {{ end }}">
+<head>
+    {{ partial "head.html" }}
+</head>
+<body>
+
+<div class="page-area">
+<div class="container">
+
+	<header>
+        {{ block "header" . }}
+            This will be replaced with content from the 
+            corresponding "define" action found in the template
+            to which this base template is applied.
+        {{ end }}
+	</header>
+
+    <main>
+        {{ block "main" . }}
+            This will be replaced with content from the 
+            corresponding "define" action found in the template
+            to which this base template is applied.
+        {{ end }}
+	</main>
+
+    <footer>
+		{{ partial "footer.html" . }}
+	</footer>
+
+</div>  <!-- closes container div -->
+</div> <!-- closes page-area div -->
+
+</body>
+</html>
