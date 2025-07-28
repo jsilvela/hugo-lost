@@ -204,8 +204,8 @@ ul.tags {
 }
 
 ul.tags > li {
-    display: inline-block;
-    margin-right: 7px;
+	display: inline-block;
+	margin-right: 7px;
 }
 
 .header-logo img {

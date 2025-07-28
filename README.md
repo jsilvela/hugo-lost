@@ -37,12 +37,12 @@ for the footer, analytics, copyright.
 ``` toml
 [params]
   copyright = "Name of copyright holder"
-  github   = "github handle"
-  email     = "owner email"
+  github = "github handle"
+  email = "owner email"
   goatcounter = "goatcounter URL"
-  mastodon   = "mastodon handle"
-  bluesky   = "bluesky handle"
-  twitter   = "twitter handle"
+  mastodon = "mastodon handle"
+  bluesky = "bluesky handle"
+  twitter = "twitter handle"
 ```
 
 ## License

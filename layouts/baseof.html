@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ with .Language.LanguageCode }} {{- . -}} {{ else }} {{ with site.Language.LanguageCode }} {{- . -}} {{ else }} en-US {{ end }} {{ end }}">
 <head>
-    {{ partial "head.html" . }}
-    {{ if .Param "math" }}
-        {{ partialCached "math.html" . }}
-    {{ end }}
+	{{ partial "head.html" . }}
+	{{ if .Param "math" }}
+		{{ partialCached "math.html" . }}
+	{{ end }}
 </head>
 <body>
 
@@ -12,22 +12,22 @@
 <div class="container">
 
 	<header>
-        {{ block "header" . }}
-            Definition: "header"
-            This will be replaced with content from the 
-            template to which this base template is applied.
-        {{ end }}
+		{{ block "header" . }}
+			Definition: "header"
+			This will be replaced with content from the
+			template to which this base template is applied.
+		{{ end }}
 	</header>
 
-    <main>
-        {{ block "main" . }}
-            Definition: "main"
-            This will be replaced with content from the 
-            template to which this base template is applied.
-        {{ end }}
+	<main>
+		{{ block "main" . }}
+			Definition: "main"
+			This will be replaced with content from the
+			template to which this base template is applied.
+		{{ end }}
 	</main>
 
-    <footer>
+	<footer>
 		{{ partial "footer.html" . }}
 	</footer>
 
