@@ -4,10 +4,10 @@
 
 {{ $keywords := slice }}
 {{ if .Params.tags -}}
-    {{ $keywords = $keywords | append .Params.tags }}
+	{{ $keywords = $keywords | append .Params.tags }}
 {{- end }}
 {{ if .Keywords -}}
-    {{ $keywords = $keywords | append .Keywords }}
+	{{ $keywords = $keywords | append .Keywords }}
 {{- end }}
 <meta name="keywords" content="{{ with $keywords }}{{ delimit . ", "}}{{ end }}">
 
@@ -31,5 +31,5 @@
 </title>
 {{ with .Site.Params.goatcounter }}
 <script data-goatcounter="{{ . }}"
-        async src="//gc.zgo.at/count.js"></script>
+		async src="//gc.zgo.at/count.js"></script>
 {{ end }}
