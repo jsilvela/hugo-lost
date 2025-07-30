@@ -1,4 +1,5 @@
 {{ define "header" }}
+	<nav>
 	{{ if .IsHome }}
 		<h1 class="site-title">{{ .Site.Title }}</h1>
 	{{ else }}
@@ -9,6 +10,7 @@
 		{{ partial "nav.html" . }}
 		{{ partial "tags.html" . }}
 	{{end}}
+	</nav>
 {{ end }}
 
 {{ define "main" }}
