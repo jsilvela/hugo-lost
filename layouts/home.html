@@ -38,7 +38,7 @@
 
 	<!-- Posts -->
 	{{ range where .Sections "Section" "=" "post" }}
-		<h2>Posts</h2>
+		<h2>Posts <a href="post/index.xml">&emsp;(RSS feed)</a></h2>
 		{{ range .Pages }}
 			<article>
 				<h2 class="entry-title">
