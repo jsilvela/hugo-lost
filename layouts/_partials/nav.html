@@ -1,25 +1,25 @@
 		{{if or .PrevInSection .NextInSection}}
 		<table>
-			{{if .NextInSection}}
+			{{with .NextInSection}}
 				<tr>
-					<td><a href="{{.NextInSection.Permalink}}">
+					<td><a href="{{.RelPermalink}}">
 						&lt;&lt; Newer
 						</a>
 					</td>
 					<td>
-						{{.NextInSection.Title | markdownify}}
+						{{.LinkTitle | markdownify}}
 					</td>
 				</tr>
 			{{end}}
-			{{if .PrevInSection}}
+			{{with .PrevInSection}}
 				<tr>
 					<td>
-						<a href="{{.PrevInSection.Permalink}}">
+						<a href="{{.RelPermalink}}">
 							Older &gt;&gt;
 						</a>
 					</td>
 					<td>
-						{{.PrevInSection.Title | markdownify}}
+						{{.LinkTitle | markdownify}}
 					</td>
 				</tr>
 			{{end}}
