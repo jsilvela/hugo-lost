@@ -5,11 +5,12 @@ html {
 	--code-font-size-print: 10pt;
 
 	--light-mode-color: #222;
-	--light-mode-code-color: #000;
-	--light-mode-page-background: #fafaf7;
-	--light-mode-overall-background: #eaeae7;
-	--light-mode-link-color: #006CBF;
-	--light-mode-text-accents: #d73027;
+	--light-mode-code-color: #222;
+	--light-mode-page-background: #e5e3e1;
+	--light-mode-overall-background: #e5e3e1;
+	--light-mode-link-color: #225ea8;
+	--light-mode-text-accents: #bd0026;
+	--light-mode-meta-color: #5c6a72;
 
 	--dark-mode-color: #d3c6aa;
 	--dark-mode-code-color: #d3c6aa;
@@ -18,6 +19,7 @@ html {
 	--dark-mode-page-background: #272E33;
 	--dark-mode-link-color: #7fbbb3;
 	--dark-mode-text-accents:#E67e80;
+	--dark-mode-meta-color: #9da9a0;
 }
 
 @media screen {
@@ -39,13 +41,25 @@ html {
 		background-color: var(--light-mode-page-background);
 	}
 
+	a {
+		color: var(--light-mode-link-color);
+	}
+
 	pre, code {
 		background-color: var(--light-mode-overall-background);
 		color: var(--light-mode-code-color);
 	}
 
-	a {
-		color: var(--light-mode-link-color);
+	h2, h3, h4, h5, h6 {
+		color: var(--light-mode-text-accents);
+	}
+
+	blockquote {
+		border-color: var(--light-mode-text-accents);
+	}
+
+	.entry-meta {
+		color: var(--light-mode-meta-color);
 	}
 }
 
@@ -86,6 +100,18 @@ html {
 		background-color: var(--dark-mode-code-background);
 		color: var(--dark-mode-code-color);
 	}
+
+	h2, h3, h4, h5, h6 {
+		color: var(--dark-mode-text-accents);
+	}
+
+	blockquote {
+		border-color: var(--dark-mode-text-accents);
+	}
+
+	.entry-meta {
+		color: var(--dark-mode-meta-color);
+	}
 }
 
 @page {
@@ -120,24 +146,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h2, h3, h4, h5, h6 {
 	font-weight: 700;
-}
-
-@media screen and (prefers-color-scheme: dark) {
-	h2, h3, h4, h5, h6 {
-		color: var(--dark-mode-text-accents);
-	}
-	blockquote {
-		border-color: var(--dark-mode-text-accents);
-	}
-}
-
-@media screen and (prefers-color-scheme: light) {
-	h2, h3, h4, h5, h6 {
-		color: var(--light-mode-text-accents);
-	}
-	blockquote {
-		border-color: var(--light-mode-text-accents);
-	}
 }
 
 img {
@@ -236,7 +244,6 @@ ul.tags > li {
 	margin-bottom: 0;
 	font-weight: 700;
 	font-size: 1em;
-	color: #8F8B8D;
 }
 
 footer, .footnotes, span.caption, figcaption {
