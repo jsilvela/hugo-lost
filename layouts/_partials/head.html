@@ -18,6 +18,10 @@
 	<meta name="author" content="{{ .name }}">
 {{- end }}
 
+{{ with .Site.Params.favicon -}}
+<link rel="icon" type="{{ .type }}" sizes="{{ .sizes }}" href="{{ .path }}">
+{{- end }}
+
 {{ $theme := resources.Get "css/custom.css" }}
 {{ $extra := resources.Get "css/extra.css" }}
 {{ $CSS := slice $theme $extra | resources.Concat "main.css" }}
@@ -25,9 +29,9 @@
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media="all">
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
 <title>
-	{{ $isHomePage := eq .Title .Site.Title }}
+	{{- $isHomePage := eq .Title .Site.Title -}}
 	{{ .Title }}
-	{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}
+	{{- if eq $isHomePage false }} - {{ .Site.Title }}{{ end -}}
 </title>
 {{ with .Site.Params.goatcounter }}
 <script data-goatcounter="{{ . }}"
