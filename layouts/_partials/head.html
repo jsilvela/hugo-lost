@@ -29,9 +29,8 @@
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media="all">
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
 <title>
-	{{- $isHomePage := eq .Title .Site.Title -}}
 	{{ .Title }}
-	{{- if eq $isHomePage false }} - {{ .Site.Title }}{{ end -}}
+	{{- if not .IsHome }} - {{ .Site.Title }}{{ end -}}
 </title>
 {{ with .Site.Params.goatcounter }}
 <script data-goatcounter="{{ . }}"
