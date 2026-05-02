@@ -46,7 +46,7 @@ html {
 	}
 
 	pre, code {
-		background-color: var(--light-mode-overall-background);
+		background-color: var(--light-mode-code-background);
 		color: var(--light-mode-code-color);
 	}
 
