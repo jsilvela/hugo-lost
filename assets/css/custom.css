@@ -7,7 +7,7 @@ html {
 	--light-mode-color: #222;
 	--light-mode-code-color: #222;
 	--light-mode-page-background: #e5e3e1;
-	--light-mode-overall-background: #e5e3e1;
+	--light-mode-overall-background: #7f7f7f;
 	--light-mode-code-background: #e2e2e2;
 	--light-mode-link-color: #225ea8;
 	--light-mode-text-accents: #bd0026;
@@ -33,9 +33,12 @@ html {
 	}
 
 	body {
-		-webkit-text-size-adjust: 100%;
 		color: var(--light-mode-color);
 		background-color: var(--light-mode-overall-background);
+		/* tssk, Apple */
+		-webkit-text-size-adjust: 100%;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
 	}
 
 	div.page-area {
