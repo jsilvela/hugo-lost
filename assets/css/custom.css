@@ -4,20 +4,20 @@ html {
 	--text-font-size-print: 11pt;
 	--code-font-size-print: 10pt;
 
-	--light-mode-color: #222;
+	--light-mode-color: #111;
 	--light-mode-code-color: #222;
-	--light-mode-page-background: #e5e3e1;
+	--light-mode-page-background: #e4e4e4;
 	--light-mode-overall-background: #7f7f7f;
 	--light-mode-code-background: #e2e2e2;
-	--light-mode-link-color: #225ea8;
+	--light-mode-link-color: #08519c;
 	--light-mode-text-accents: #bd0026;
-	--light-mode-meta-color: #5c6a72;
+	--light-mode-meta-color: #4c5a62;
 
 	--dark-mode-color: #d3c6aa;
 	--dark-mode-code-color: #d3c6aa;
 	--dark-mode-overall-background: #1e2326;
 	--dark-mode-code-background: #2e383c;
-	--dark-mode-page-background: #272E33;
+	--dark-mode-page-background: #272e33;
 	--dark-mode-link-color: #7fbbb3;
 	--dark-mode-text-accents:#E67e80;
 	--dark-mode-meta-color: #9da9a0;
@@ -184,8 +184,9 @@ header table {
 }
 
 blockquote {
-	font-style: italic;
+	font-style: normal;
 	border-left-width: 5px;
+	padding: 15px 0 15px 20px;
 	border-left-style: solid;
 }
 
