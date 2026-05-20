@@ -8,7 +8,9 @@
 	<div class="meta">
 		<b>Meta</b>
 			{{ range .Pages }}
-			<a href="{{ .Page.RelPermalink }}">{{.Page.Title | markdownify }}</a>
+			<span class="item">
+				<a href="{{ .Page.RelPermalink }}">{{.Page.Title | markdownify }}</a>
+			</span>
 			{{ end }}
 	</div>
 	{{ end }}
@@ -28,7 +30,7 @@
 	<div class="tags">
 		<b>Tags</b>
 		{{range .Site.Taxonomies.tags -}} 
-			<span class="tag">
+			<span class="item">
 				<a href={{ .Page.RelPermalink }}>
 					{{.Page.Title}}
 				</a><sup class="b">{{.Count}}</sup>
