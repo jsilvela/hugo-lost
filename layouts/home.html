@@ -20,7 +20,7 @@
 		<div class="pages">
 			<b>Pages</b>
 			{{ range .Pages }}
-				<span class="entry-title">
+				<span class="item">
 					<a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
 				</span>
 			{{ end }}
