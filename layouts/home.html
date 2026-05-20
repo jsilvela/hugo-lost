@@ -6,9 +6,9 @@
 
 	{{ range where .Sections "Section" "=" "meta" }}
 	<div class="meta">
-		<b>Meta&nbsp;</b>
+		<b>Meta</b>
 			{{ range .Pages }}
-			<a href="{{ .Page.RelPermalink }}">{{.Page.Title | markdownify }}</a>&nbsp;
+			<a href="{{ .Page.RelPermalink }}">{{.Page.Title | markdownify }}</a>
 			{{ end }}
 	</div>
 	{{ end }}
@@ -16,7 +16,7 @@
 	<!-- Fixed entries -->
 	{{ range where .Sections "Section" "=" "top" }}
 		<div class="pages">
-			<b>Pages&nbsp;</b>
+			<b>Pages</b>
 			{{ range .Pages }}
 				<span class="entry-title">
 					<a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
@@ -26,7 +26,7 @@
 	{{ end }}
 				
 	<div class="tags">
-		<b>Tags&nbsp;</b>
+		<b>Tags</b>
 		{{range .Site.Taxonomies.tags -}} 
 			<span class="tag">
 				<a href={{ .Page.RelPermalink }}>
@@ -38,7 +38,9 @@
 
 	<!-- Posts -->
 	{{ range where .Sections "Section" "=" "post" }}
-		<h2>Posts&emsp;<a href="post/index.xml">(RSS feed)</a></h2>
+	<div class="posts">
+		<h2>Posts</h2>
+		<span class="rss"><a href="post/index.xml">[RSS feed]</a></span>
 		{{ range .Pages }}
 			<article>
 				<h2 class="entry-title">
@@ -51,6 +53,7 @@
 				</span>
 			</article>
 		{{ end }}
+	</div>
 	{{ end }}
 
 {{ end }}
