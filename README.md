@@ -5,6 +5,11 @@ A simple theme for Hugo, based on *Hugo Zen*.
 It can do dark/light switch: dark mode is based the [everforest dark theme](https://github.com/sainnhe/everforest),
 light mode loosely based on Rosé Pine Dawn.
 
+The home page contains a header with tag cloud and pinned pages.
+
+![homepage](images/homepage.jpeg)
+![single page, dark mode](images/dark-mode.png)
+
 Hugo Lost is a departure from [Hugo Zen](https://github.com/rakuishi/hugo-zen),
 adding a few bits I needed for my sites
 [Lost Among Notes](https://blog.silvela.org/) and Lost Among Europeans, and simplifying
