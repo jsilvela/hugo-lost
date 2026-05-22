@@ -22,9 +22,10 @@
 <link rel="icon" type="{{ .type }}" sizes="{{ .sizes }}" href="{{ .path }}">
 {{- end }}
 
+{{ $reset := resources.Get "css/reset.css" }}
 {{ $theme := resources.Get "css/custom.css" }}
 {{ $extra := resources.Get "css/extra.css" }}
-{{ $CSS := slice $theme $extra | resources.Concat "main.css" }}
+{{ $CSS := slice $reset $theme $extra | resources.Concat "main.css" }}
 <!-- {{ $CSS := resources.Match "css/**.css" | resources.Concat "main.css" }} -->
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media="all">
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
