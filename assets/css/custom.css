@@ -212,7 +212,7 @@ p {
 	margin: 1em 0;
 }
 
-ul {
+ul, ol {
 	padding-left: 40px;
 	margin-top: 1em;
 	margin-bottom: 1em;
