@@ -2,10 +2,10 @@
 		<table>
 			{{with .NextInSection}}
 				<tr>
-					<td><a href="{{.RelPermalink}}">
-						&lt;&lt; Next
+					<th><a href="{{.RelPermalink}}">
+						Next
 						</a>
-					</td>
+					</th>
 					<td>
 						{{.LinkTitle | markdownify}}
 					</td>
@@ -13,11 +13,11 @@
 			{{end}}
 			{{with .PrevInSection}}
 				<tr>
-					<td>
+					<th>
 						<a href="{{.RelPermalink}}">
-							Previous &gt;&gt;
+							Previous
 						</a>
-					</td>
+					</th>
 					<td>
 						{{.LinkTitle | markdownify}}
 					</td>
