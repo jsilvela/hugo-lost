@@ -36,7 +36,6 @@ html {
 		color: var(--light-mode-color);
 		background-color: var(--light-mode-overall-background);
 		/* tssk, Apple */
-		-webkit-text-size-adjust: 100%;
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
 	}
