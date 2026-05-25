@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ with .Language.Locale }} {{- . -}} {{ else }} {{ with site.Language.Locale }} {{- . -}} {{ else }} en-US {{ end }} {{ end }}">
 <head>
+	{{ partial "head-extra.html" . }}
 	{{ partial "head.html" . }}
 </head>
 <body>
